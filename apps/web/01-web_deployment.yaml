@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-web-proyect 
+  name: web-proyect 
   namespace: final-project      
   labels:
-    app: my-web
+    app: web
 spec:
   # replicas: 1             # Comented for kedas to take the lead
   selector:
     matchLabels:
-      app: my-web
+      app: web
   template:
     metadata:
       labels:
-        app: my-web
+        app: web
     spec:
       containers:
       - name: nginx
@@ -27,3 +27,4 @@ spec:
           limits:
             cpu: "200m"    # Set CPU limit in 0.2
             memory: "256Mi"
+          

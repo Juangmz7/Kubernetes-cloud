@@ -1,14 +1,14 @@
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
-  name: my-web-scaler
+  name: web-scaler
   namespace: final-project
 spec:
   scaleTargetRef:
-    name: my-web-proyect   
+    name: web-proyect   
   minReplicaCount: 1        # Minimum pods during normal hours
   maxReplicaCount: 10       # Maximum pods under heavy load
-  pollingInterval:  15      # Frequency for checking the work load
+  pollingInterval:  15      # Frequency for checking the work load in seconds
   cooldownPeriod:   120                                     
   fallback:                                                 
     failureThreshold: 3     #  If Connection fails 3 times then safe mode
