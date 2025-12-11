@@ -13,7 +13,7 @@ spec:
       kinds:
       - kind: HTTPRoute
       namespaces: 
-        from: Same          # Only allows routes with the same namespace 
+        from: All  # Allows others namespace like qa
   
   - name: tcp-redis
     protocol: TCP

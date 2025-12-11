@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-v2
-  namespace: final-project
+  namespace: qa
   labels:
     app: web-v2
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: web-v2
-        image: juangmz7/my-final-project:qa   # Image change for v2
+        image: nginx:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
