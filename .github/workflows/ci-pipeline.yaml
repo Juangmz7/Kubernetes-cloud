@@ -50,7 +50,7 @@ jobs:
           tags: 
           # Gets from metadata the branch name & if it's main, creates one image for it and another for :lastest
             |
-            type=ref,event=branch 
+            type=ref,event=branch,enable=${{ github.ref != 'refs/heads/main' }}
             
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }} 
 
