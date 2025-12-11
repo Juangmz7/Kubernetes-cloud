@@ -17,8 +17,8 @@ spec:
         app: web-v2
     spec:
       containers:
-      - name: apache
-        image: httpd:alpine   # Image change for v2
+      - name: nginx
+        image: nginx:alpine   # Image change for v2
         ports:
         - containerPort: 80
         resources:        
