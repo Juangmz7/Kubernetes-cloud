@@ -9,7 +9,7 @@ app = Flask(__name__)
 # the associated function.
 @app.route('/')
 def hello_world():
-    return 'Hello World from production !!!'
+    return 'Hello World from dev !!!'
 
 # main driver function
 if __name__ == '__main__':
