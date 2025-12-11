@@ -19,6 +19,7 @@ spec:
       containers:
       - name: web-v2
         image: juangmz7/my-final-project:qa   # Image change for v2
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         resources:        
