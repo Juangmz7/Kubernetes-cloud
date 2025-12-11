@@ -9,7 +9,7 @@ app = Flask(__name__)
 # the associated function.
 @app.route('/')
 def hello_world():
-    return 'Hello World, from my Kubernetes project, this is dev branch! :)'
+    return 'Hello World from dev branch! :)'
 
 # main driver function
 if __name__ == '__main__':
