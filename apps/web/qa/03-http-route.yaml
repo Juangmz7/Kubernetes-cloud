@@ -6,6 +6,7 @@ metadata:
 spec:
   parentRefs:
   - name: gateway         # Connection with gateway
+    namespace: final-project
     sectionName: http     # Reffers to the gateway listener for http
   hostnames:
   - "up.78.cloudops.ucll.cloud"
