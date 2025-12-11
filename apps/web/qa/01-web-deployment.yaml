@@ -16,7 +16,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: web-appV1
+      - name: web-v1
         image: juangmz7/my-final-project:qa
         imagePullPolicy: Always
         ports:
