@@ -13,7 +13,16 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /qa             
+        value: /qa     
+
+    # Parse the url to
+    filters:
+      - type: URLRewrite
+        urlRewrite:
+          path:
+            type: ReplacePrefixMatch
+            replacePrefixMatch: /
+
     backendRefs:
     - name: web-service   # Sends to (Service)
       port: 80
