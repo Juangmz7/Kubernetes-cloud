@@ -3,6 +3,9 @@ name: CI Pipeline - Build & Test (DockerHub)
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'src/**'              # Only activates if changes the code from paths
+      - '.github/workflows/**'
 
 jobs:
   # Testing pipelines
