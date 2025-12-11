@@ -3,9 +3,10 @@ name: CI Pipeline - Build & Test (DockerHub)
 on:
   push:
     branches: [ "main", "dev", "qa" ]
-    paths:                    # Since this project it's a monorepo:
-      - 'src/**'              # It's only activated if the code from paths is changed 
-      - '.github/workflows/**'
+    tags: [ 'v*' ]  # It's activated when pushing a tag which starts from 'v'
+    paths:
+      - 'src/**'
+      - '.github/workflows/**' # It's only activated if the code from paths and tags are changed
 
 jobs:
   # Testing pipelines
@@ -52,6 +53,8 @@ jobs:
             type=ref,event=branch 
             
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }} 
+
+            type=semver,pattern={{version}}
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v4
